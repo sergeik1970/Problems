@@ -11,7 +11,7 @@ function topKFrequent(nums, k) {
   //   Переделываем ее в массив типа ["число": "сколько раз встретилось"]
   let arr = Object.entries(table);
   //   Сортируем массив по количеству повторений по убыванию
-  let sortArr = arr.sort((a, b) => b[1] - a[1]);
+  let sortArr = arr.sort((a, b) => b[1] - a[1]); 
   //   Отделяем первые k элементов массива
   let firstKElements = sortArr.slice(0, k);
   //   Получаем первые k чисел из массива
@@ -22,3 +22,6 @@ function topKFrequent(nums, k) {
 console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2)); // [1,2]
 console.log(topKFrequent([1, 2, 1, 2, 1, 2, 3, 1, 3, 2], 2)); // [1,2]
 console.log(topKFrequent([1, 1, 1, 2, 2, 3, 3, 3, 3, 3, 3], 2)); // [1,3]
+console.log(
+  topKFrequent([1, 1, 1, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4], 3)
+); // [1, 3, 4]
